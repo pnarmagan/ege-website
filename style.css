@@ -10,6 +10,51 @@
     box-sizing: border-box;
 }
 
+/* SMOOTH SCROLL */
+html{
+    scroll-behavior: smooth;
+}
+
+/* BUTTON */
+
+.btn{
+    font-weight: 500;
+    padding: 12px 20px;
+    background: #efefef;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn>i{
+    margin-left: 10px;
+}
+
+.btn:hover{
+    background: #505148;
+    color: #efefef;
+}
+
+/* CHANGE THE SCROLL BAR DESIGN */
+
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-track{
+    background: #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #505148;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #bbb;
+}
 
 .header{
     position: fixed;
@@ -145,16 +190,15 @@ body.scrolled .navbar a {
     animation-delay: 1.6s;
 }
 
-/* ABOUT - CONTAINER */
+/* ABOUT */
 
-.container {
+/* .container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* İki eşit sütun */
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 2rem; /* İki sütun arasındaki boşluk */
+    gap: 2rem; 
     max-width: 1200px;
-    margin: 0 auto; /* Sayfa ortalama */
-    /* padding: 2rem; */
+    margin: 0 auto;
     max-height: 600px;
     padding: 20px;
 }
@@ -176,12 +220,115 @@ body.scrolled .navbar a {
 
 
 .image img {
-        max-width: 95%; /* Görsel maksimum genişliği ekranın %60'ı olacak */
-        height: auto; /* Oranları koruyarak otomatik yükseklik ayarla */
-        display: block; /* Gereksiz boşlukları önler */
-        margin: 0 auto; /* Ortalamak için */
+        max-width: 95%; 
+        height: auto;
+        display: block;
+        margin: 0 auto; 
     
+} */
+
+/* ABOUT3 */
+
+
+/* Bölüm Başlığı */
+.about-section h2 {
+    font-family: "Syne", serif;
+    font-size: 28px;
+    margin: 20px 0;
+    text-align: center;
 }
+
+/* İçerik Alanı */
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Tanıtım Kartı */
+.intro-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    text-align: left;
+}
+
+.intro-card h3 {
+    margin-top: 0;
+    font-family: "Syne", serif;
+
+}
+
+.intro-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+    font-family: "Outfit", serif;
+
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #666;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "Outfit", serif;
+
+}
+
+.btn i {
+    margin-left: 5px;
+}
+
+/* Beceri Alanları */
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 45%;
+}
+
+.skills h3 {
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: "Syne", serif;
+
+}
+
+.skill {
+    background-color: #666;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 3px;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-card, .skills {
+        width: 90%;
+    }
+}
+
+
+
+
 
 
 /* KEYFRAMES ANIMATION */
