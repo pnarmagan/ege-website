@@ -58,15 +58,19 @@ html{
 
 .header{
     position: fixed;
+    display: flex;
+    justify-content: space-between;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 8%;
-    background: transparent;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1); /* Yarı saydam arka plan */
+    backdrop-filter: blur(10px); /* Bulanıklık efekti */
+    -webkit-backdrop-filter: blur(10px); /* Safari desteği */
+    z-index: 1000; /* Diğer içeriklerin navbar'ın altında kalmasını sağlar */
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    padding: 0 20px;
 }
 
 .logo{
@@ -190,6 +194,43 @@ body.scrolled .navbar a {
     animation-delay: 1.6s;
 }
 
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background: #bbb; /* Arka plan rengi */
+    padding: 10px 0;
+    white-space: nowrap;
+    position: relative;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee-animation 28s linear infinite;
+}
+
+.marquee-content span {
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 0 20px;
+    color: black;
+}
+
+/* Animasyon */
+@keyframes marquee-animation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+
 /* ABOUT */
 
 /* .container {
@@ -230,7 +271,6 @@ body.scrolled .navbar a {
 /* ABOUT3 */
 
 
-/* Bölüm Başlığı */
 .about-section h2 {
     font-family: "Syne", serif;
     font-size: 28px;
@@ -238,7 +278,6 @@ body.scrolled .navbar a {
     text-align: center;
 }
 
-/* İçerik Alanı */
 .about-content {
     display: flex;
     justify-content: center;
@@ -248,7 +287,6 @@ body.scrolled .navbar a {
     margin: auto;
 }
 
-/* Tanıtım Kartı */
 .intro-card {
     background: white;
     padding: 20px;
@@ -289,7 +327,6 @@ body.scrolled .navbar a {
     margin-left: 5px;
 }
 
-/* Beceri Alanları */
 .skills {
     display: flex;
     flex-direction: column;
