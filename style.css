@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 *{
     margin: 0;
@@ -198,7 +200,7 @@ body.scrolled .navbar a {
 .marquee {
     width: 100%;
     overflow: hidden;
-    background: #bbb; /* Arka plan rengi */
+    background: #fff; 
     padding: 10px 0;
     white-space: nowrap;
     position: relative;
@@ -216,7 +218,7 @@ body.scrolled .navbar a {
     font-size: 15px;
     font-weight: lighter;
     padding: 0 20px;
-    color: black;
+    color: #597FAE;
 }
 
 /* Animasyon */
@@ -231,9 +233,9 @@ body.scrolled .navbar a {
 
 
 
-/* ABOUT */
+/* ABOUT START*/
 
-/* .container {
+.container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -247,70 +249,50 @@ body.scrolled .navbar a {
 .text {
     max-width: 600px;
     line-height: 1.8;
-    font-family: "Outfit", serif;
-    color: rgba(0, 0, 0, 0.5);
+    font-family: "Open Sans", serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.67;
+    color: #4d4d5c;
+    margin-bottom: 25px;
+
 }
 
 .text h1 {
     font-family: "Syne", serif;
-    font-size: 2.5rem;
+    font-size: 18px;
     font-weight: bold;
     color: rgb(0, 0, 0);
-    
+    letter-spacing: 7px;
+    color: #597FAE;
+    margin-bottom: .25rem;
+    display: block;
+    font-family: "Jost", serif; 
 }
 
+.image {
+    position: relative; /* Konumlandırma bağlamı burada oluşturuluyor */
+}
 
 .image img {
-        max-width: 95%; 
-        height: auto;
-        display: block;
-        margin: 0 auto; 
-    
-} */
-
-/* ABOUT3 */
-
-
-.about-section h2 {
-    font-family: "Syne", serif;
-    font-size: 28px;
-    margin: 20px 0;
-    text-align: center;
+    max-width: 95%; 
+    display: inline-block;
 }
 
-.about-content {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    align-items: flex-start;
-    max-width: 900px;
-    margin: auto;
+.shape {
+    width: 50px;  /* Şeklin genişliği */
+    height: 50px; /* Şeklin yüksekliği */
+    background-color: #4CAF50; /* Yeşil renk */
+    position: absolute;
+    bottom: 20px; /* Alt kenara 20px mesafe */
+    right: 20px;  /* Sağ kenara 20px mesafe */
 }
 
-.intro-card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 60%;
-    text-align: left;
-}
+/* ABOUT END */
 
-.intro-card h3 {
-    margin-top: 0;
-    font-family: "Syne", serif;
+/* BUTON START */
 
-}
-
-.intro-card p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.8;
-    font-family: "Outfit", serif;
-
-}
-
-.btn {
+/* .btn {
     display: inline-block;
     padding: 10px 15px;
     background-color: #666;
@@ -325,31 +307,9 @@ body.scrolled .navbar a {
 
 .btn i {
     margin-left: 5px;
-}
+} */
 
-.skills {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 45%;
-}
-
-.skills h3 {
-    text-align: left;
-    margin-bottom: 10px;
-    font-family: "Syne", serif;
-
-}
-
-.skill {
-    background-color: #666;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    margin: 3px;
-    display: inline-block;
-}
+/* BUTON END */
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -361,6 +321,119 @@ body.scrolled .navbar a {
     .intro-card, .skills {
         width: 90%;
     }
+}
+
+/* .container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem; 
+    max-width: 1200px;
+    margin: 0 auto;
+    max-height: 600px;
+    padding: 20px;
+}
+
+.container2 .title span{
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #597FAE;
+    margin-bottom: 6px;
+    font-family: "Syne", serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    letter-spacing: 7px;
+    color: #597FAE;
+    margin-bottom: .25rem;
+    display: block;
+    font-family: "Jost", serif; 
+} */
+
+.contact-container {
+    display: flex;
+    background: white;
+    padding: 90px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    width: 1350px;
+}
+
+.contact-info {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.contact-info h3 {
+    color: #597FAE;
+    letter-spacing: 2px;
+    font-family: "Syne", serif;
+
+}
+
+.contact-info h1 {
+    margin-bottom: 20px;
+    font-family: "Jost", serif;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.icon {
+    background: #597FAE;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.details p {
+    color: #4d4d5c;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #597FAE;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 
