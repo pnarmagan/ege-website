@@ -74,4 +74,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+// CONTACT ME FORM HOVER EFEKTİ
+document.addEventListener("DOMContentLoaded", function () {
+    function revealForm() {
+        let form = document.querySelector(".contact-form");
+        let formPosition = form.getBoundingClientRect().top;
+        let screenHeight = window.innerHeight;
+
+        // Eğer formun üst kenarı ekranın %80'ine girdiyse animasyonu tetikle
+        if (formPosition < screenHeight * 0.8) {
+            form.classList.add("show");
+            window.removeEventListener("scroll", revealForm); // Animasyon tek sefer çalışsın
+        }
+    }
+
+    window.addEventListener("scroll", revealForm);
+    revealForm(); // Sayfa yüklendiğinde de kontrol et (eğer hemen görünürse)
+});
+
 // CONTACT ME END
